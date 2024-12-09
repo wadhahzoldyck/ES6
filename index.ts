@@ -198,3 +198,38 @@ console.log(p.firstname);
 console.log(p.lastname);
 console.log(p.fullname);
 console.log(p.isSenior());
+
+//Destructing Array
+
+console.log("++++++++ Destructing Array ++++++++++");
+
+let student = ["wadhah", "naggui", "male"];
+let [fname, lname, gender] = student;
+console.log(fname, lname, gender);
+
+//Destructing array using rest Operator
+
+let student1 = ["wadhah", "naggui", "male"];
+let [fname1, ...elements] = student;
+console.log(fname1, elements);
+
+//Destructing Objects
+
+console.log("+++++ Destructing Objects +++++++++++++++");
+
+let object = {
+  fname2: "wajdi",
+  lname2: "naggui",
+  gender2: "male",
+};
+
+let { fname2: f, lname2: l, gender2: g } = object;
+console.log(f, l, g);
+
+//String templates
+
+console.log("+++++++++ String templates +++++++++++++++");
+
+let user = "wadhahzo";
+let greet = `welcome to ${user}`;
+console.log(greet);
