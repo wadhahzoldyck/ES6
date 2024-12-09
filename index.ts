@@ -252,3 +252,65 @@ let letters = "ABC0";
 for (let letter of letters) {
   console.log(letter);
 }
+
+//Class
+
+console.log("+++++++++ Class ++++++++++");
+class Person {
+  greet() {}
+}
+
+let pers = new Person();
+
+console.log(pers.greet === Person.prototype.greet);
+
+//Class Body and Methods
+
+class Person1 {
+  name: any;
+
+  // Constructor method is used for creating and initializing an object
+  constructor(name: any) {
+    this.name = name;
+    console.log(this.name + " constructor");
+  }
+  static staticMethod() {
+    console.log("static Method");
+  }
+  greetPerson() {
+    console.log(`Hello ${this.name}	`);
+  }
+}
+
+let p1 = new Person1("wadhah");
+Person1.staticMethod();
+p1.greetPerson();
+
+//so here we have in class 3 types of methods which are constructor static methods and prototype methodes
+
+//Class Inheritance
+
+console.log("+++++++++++++Class Inheritance+++++++++++++++++");
+
+class Game {
+  constructor(name: any) {
+    console.log(name + "Game Constructor");
+  }
+
+  getId() {
+    return 10;
+  }
+}
+
+class Fifa extends Game {
+  constructor(name: any) {
+    super(name);
+    console.log(name + "Fifa Constructor");
+  }
+  getId() {
+    return super.getId();
+  }
+}
+
+let fifa = new Fifa("Fifa");
+console.log(fifa.getId()); //fils have acces to parent method
