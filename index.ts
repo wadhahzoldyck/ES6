@@ -129,3 +129,42 @@ let getValue = function (value = 10) {
 
 getValue();
 getValue(20);
+
+//Rest Operator
+
+console.log("+++++ Rest Operator +++++");
+
+let displayColors = function (message: any, ...colors: any) {
+  console.log(message);
+  console.log(colors);
+  for (let i in colors) {
+    console.log(colors[i]);
+  }
+};
+let message = "List of colors";
+displayColors(message, "Red");
+displayColors(message, "Red", "blue");
+displayColors(message, "Red", "blue", "green");
+
+// spread operator
+
+console.log("+++++ spread operator ++++");
+
+let displayColorsSpread = function (message: any, ...colors: any) {
+  console.log(messageSpread);
+  for (let i in colors) {
+    console.log(colors[i]);
+  }
+};
+let messageSpread = "List of colors";
+
+let colors = ["Orange", "Pink", "yellow"];
+
+
+displayColorsSpread(message, ...colors);
+
+
+// rest operator - in function paramter
+// spread operator - in function call
+// rest - combine (rest of all parameters are combined to a variable)
+// spread - split (arrays into individual elements)
