@@ -160,11 +160,41 @@ let messageSpread = "List of colors";
 
 let colors = ["Orange", "Pink", "yellow"];
 
-
 displayColorsSpread(message, ...colors);
-
 
 // rest operator - in function paramter
 // spread operator - in function call
 // rest - combine (rest of all parameters are combined to a variable)
 // spread - split (arrays into individual elements)
+
+// Object Literals
+
+console.log("++++++++++++++++++ Object literals ++++++++++++++++");
+
+let firstname = "wadhah";
+let lastname = "naggui";
+
+let person = {
+  firstname,
+  lastname,
+};
+
+console.log(person.firstname, person.lastname);
+
+function createPerson(firstname: any, lastname: any, age: any) {
+  let fullname = firstname + " " + lastname;
+  return {
+    firstname,
+    lastname,
+    fullname,
+    isSenior() {
+      return age > 60;
+    },
+  };
+}
+
+let p = createPerson("ghassen", "chaieb", "28");
+console.log(p.firstname);
+console.log(p.lastname);
+console.log(p.fullname);
+console.log(p.isSenior());
