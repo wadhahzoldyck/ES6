@@ -233,3 +233,22 @@ console.log("+++++++++ String templates +++++++++++++++");
 let user = "wadhahzo";
 let greet = `welcome to ${user}`;
 console.log(greet);
+
+//for loop
+
+console.log("++++++++++ for loop +++++++++++++++");
+
+let games = ["FIFA", "VALORANT", "LOL"];
+for (let i in games) {
+  console.log(games[i]);
+}
+
+for (let game of games) {
+  console.log(game, "");
+}
+
+let letters = "ABC0";
+
+for (let letter of letters) {
+  console.log(letter);
+}
