@@ -405,3 +405,34 @@ for (let value of myMap1.values()) {
 for (let [key, value] of myMap1.entries()) {
   console.log(`${key} -> ${value}`);
 }
+
+//forEach
+
+var numbers = [2, 4, 6, 8];
+numbers.forEach(arrayFunction);
+function arrayFunction(element: any, index: any, array: any) {
+  console.log("arr[" + index + "]=" + element);
+}
+
+
+/*
+let myMap3 = new Map([["fname","Chandler"],
+                     ["lname","Bing"]]);
+myMap3.forEach(mapFunction);
+function mapFunction(value,key,callingMap){
+  console.log(key+" "+value);
+  console.log(myMap === callingMap);
+}  
+*/
+
+
+
+
+/*
+let mySet3 = new Set([1,2,3]);
+mySet3.forEach(setFunction);
+function setFunction(value,key,callingSet){
+  console.log(key+" "+value);
+  console.log(mySet === callingSet);
+}
+*/
