@@ -88,3 +88,44 @@ let d = 10;
 c = c + d;
 d = c - d;
 c = d + d;
+
+//arrow functions
+
+console.log("++arrow Functions++");
+var getRegvalue = function () {
+  return 10;
+};
+
+console.log(getRegvalue());
+
+//will chnage this now to arrow functions
+
+const arrowFunction = (m: any) => 10 * m;
+
+console.log(arrowFunction(5), "arrow function");
+
+//Lexical This
+
+console.log("++++++ this keyword ++++++++++++");
+var employee = {
+  id: 1,
+  greet: function () {
+    let self = this;
+    setTimeout(() => {
+      //   console.log(self.id);
+    }, 1000);
+  },
+};
+
+employee.greet();
+
+//Default Function  Parameters
+
+console.log("++++++++++++++ Default Function Parameters ++++++++++++++");
+
+let getValue = function (value = 10) {
+  console.log(value);
+};
+
+getValue();
+getValue(20);
