@@ -314,3 +314,94 @@ class Fifa extends Game {
 
 let fifa = new Fifa("Fifa");
 console.log(fifa.getId()); //fils have acces to parent method
+
+//Set and map
+let mySet = Object.create(null);
+mySet.id = 0;
+if (mySet.id) {
+  console.log("id exists");
+}
+
+let myMap = Object.create(null);
+myMap.name = "wadhah";
+let val = myMap.name;
+console.log(val);
+
+myMap[100] = "Hello";
+console.log(myMap["100"]);
+
+let ob1 = {};
+let ob2 = {};
+
+myMap[JSON.stringify(ob1)] = "World";
+
+console.log(myMap[JSON.stringify(ob2)]);
+
+console.log(ob1.toString());
+console.log(ob2.toString());
+
+//set
+
+let mySet1 = new Set();
+let obje1 = {};
+let obje2 = {};
+
+mySet1.add("Hello");
+mySet1.add(1);
+mySet1.add(obje1);
+mySet1.add(obje2);
+console.log(mySet.size);
+
+let newSet = new Set([1, 2, 3, 4, 4, 4]);
+console.log(newSet.size);
+
+let chainSet = new Set().add("hello").add("world");
+console.log(chainSet.size);
+
+console.log(newSet.delete(1));
+console.log(newSet.size);
+
+//map
+
+let personMap = new Map();
+
+personMap.set("firstName", "Chandler");
+personMap.set("age", 30);
+
+console.log(personMap.get("firstName"));
+
+let person1 = {};
+let person2 = {};
+
+personMap.set(person1, 10);
+personMap.set(person2, 20);
+
+console.log(personMap.get(person1));
+personMap.delete("firstName");
+personMap.clear();
+
+console.log(personMap.size);
+console.log(personMap.has("firstName"));
+
+//Iterating over Maps
+
+let myMap1 = new Map([
+  ["fname", "wadhah"],
+  ["lname", "naggui"],
+]);
+
+//iterate for keys
+for (let key of myMap1.keys()) {
+  console.log(key);
+}
+
+//Iterate for values
+
+for (let value of myMap1.values()) {
+  console.log(value);
+}
+
+//iterate for both values
+for (let [key, value] of myMap1.entries()) {
+  console.log(`${key} -> ${value}`);
+}
